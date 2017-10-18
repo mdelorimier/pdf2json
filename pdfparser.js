@@ -156,7 +156,7 @@ let PDFParser = (function () {
 	PdfParser.prototype.getAllFieldsTypes = function() { return this.PDFJS.getAllFieldsTypes(); };
 	PdfParser.prototype.getAllFieldsTypesStream = function() { return _createContentStream(this.getAllFieldsTypes()); };
 
-	PdfParser.prototype.getMergedTextBlocksIfNeeded = function() { return {"formImage": this.PDFJS.getMergedTextBlocksIfNeeded()}; };
+	PdfParser.prototype.getMergedTextBlocksIfNeeded = function(options) { return {"formImage": this.PDFJS.getMergedTextBlocksIfNeeded(options)}; };
 	PdfParser.prototype.getMergedTextBlocksStream = function() { return _createContentStream(this.getMergedTextBlocksIfNeeded()); };
 
 	PdfParser.prototype.destroy = function() {
